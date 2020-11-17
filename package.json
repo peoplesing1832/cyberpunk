@@ -1,0 +1,18 @@
+{
+  "name": "cyberpunk-logo",
+  "version": "0.0.1",
+  "description": "cyberpunk style logo",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peoplesing1832/cyberpunk-logo.git"
+  },
+  "author": "Yue Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peoplesing1832/cyberpunk-logo/issues"
+  },
+  "homepage": "https://github.com/peoplesing1832/cyberpunk-logo#readme"
+}
