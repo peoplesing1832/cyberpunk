@@ -11,7 +11,7 @@ for (let i = 0; i <= 100; i++) {
   keyframes +=
 `
 ${i}% {
-  left: ${random(12) - 6}px;
+  transform: translate(${random(12) - 6}px, 0px);
   text-shadow: ${random(50) - 25}px 0px 0px ${color[random(4)]};
 }
 `
