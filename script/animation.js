@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const color = ['rgb(192, 20, 124)', 'rgb(0, 170, 255)', 'rgb(255, 238, 0)', 'rgb(0, 255, 128)'];
+const color = ['#ffee00', '#c0147c', '#00aaff', '#00ff80'];
 let keyframes = ``;
 
 const random = (max) => {
@@ -11,7 +11,7 @@ for (let i = 0; i <= 100; i++) {
   keyframes +=
 `
 ${i}% {
-  transform: translate(${random(12) - 6}px, 0px);
+  left: ${random(12) - 6}px;
   text-shadow: ${random(50) - 25}px 0px 0px ${color[random(4)]};
 }
 `
