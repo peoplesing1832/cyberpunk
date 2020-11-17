@@ -5,13 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./index.css" />
+  <script src="http://jnordberg.github.io/gif.js/gif.js?v=3"></script>
+  <script src="path/to/dom-to-image.min.js" />
+  <script>
+    window.onload = function () {
+      const warehouse = document.getElementById('warehouse');
+      const createImgs = function () {
+      }
+      const createGif = function () {
+      }
+      // const gif = new GIF({
+      //   workers: 2,
+      //   quality: 10,
+      //   width: 800,
+      //   height: 200,
+      // });
+      // gif.addFrame(document.getElementById('content'));
+      // gif.on('finished', function(blob) {
+      //   window.open(URL.createObjectURL(blob));
+      // });
+      // gif.render();
+    }
+  </script>
 </head>
 <body>
   <div id="root">
     <div id="content">
-      <h1 id="title">Cyberpunk</h1>
+      <h1 id="title">我操你妈</h1>
       <div id="picture-tube"></div>
     </div>
   </div>
+  <div id="warehouse"></div>
 </body>
 </html>
