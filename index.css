@@ -30,7 +30,7 @@ root {
 #title {
   font-size: 100px;
   color: yellow;
-  animation: title 50ms infinite linear;
+  animation: title 500ms infinite linear;
 }
 
 @keyframes pictureTube {
