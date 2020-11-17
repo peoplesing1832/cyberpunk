@@ -23,14 +23,18 @@
   margin-top: 40px;
 }
 
+#form {
+  margin-top: 40px;
+}
+
 #content {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 580px;
   height: 200px;
-  background-color: rgb(18, 27, 20)
+  background-color: rgb(18, 27, 20);
 }
 
 #picture-tube {
@@ -55,11 +59,9 @@
   font-size: 80px;
   color: yellow;
   animation: title .5s infinite;
+  filter: drop-shadow(0 0 20px hsla(320, 40%, 60%, 0.8));
 }
 
-#title span {
-  font-size: 16px;
-}
 
 @keyframes pictureTube {
   0% {

@@ -12,16 +12,21 @@
 <body>
   <div id="root">
     <div id="content">
-      <h1 id="title">赛博朋克</h1>
+      <h1 id="title">Cyberpunk</h1>
       <div id="picture-tube"></div>
     </div>
-    <button id="export-gif">导出gif</button>
+    <button id="export-gif">&nbsp;&nbsp;&nbsp;&nbsp;导出gif(多等一会)&nbsp;&nbsp;&nbsp;&nbsp;</button>
+    <input id="form" />
+    <button id="change">修改</button>
   </div>
   <div id="warehouse"></div>
   <script>
     const warehouse = document.getElementById('warehouse');
     const content = document.getElementById('content');
     const exportGif = document.getElementById('export-gif');
+    const form = document.getElementById('form');
+    const change = document.getElementById('change');
+    const title = document.getElementById('title');
 
     const createImgs = async function () {
       warehouse.innerHTML = '';
@@ -48,8 +53,8 @@
       const imgs = warehouse.getElementsByTagName('img');
       const gif = new GIF({
         workers: 4,
-        quality: 3,
-        width: 500,
+        quality: 5,
+        width: 580,
         height: 200,
       });
       for (let i = 0; i < imgs.length; i++) {
@@ -67,6 +72,10 @@
     }
 
     exportGif.addEventListener('click', gif);
+
+    change.addEventListener('click', function () {
+      title.innerHTML = form.value;
+    })
   </script>
 </body>
 </html>
