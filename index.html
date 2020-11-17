@@ -3,38 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Cyberpunk</title>
   <link rel="stylesheet" href="./index.css" />
-  <script src="http://jnordberg.github.io/gif.js/gif.js?v=3"></script>
-  <script src="path/to/dom-to-image.min.js" />
-  <script>
-    window.onload = function () {
-      const warehouse = document.getElementById('warehouse');
-      const createImgs = function () {
-      }
-      const createGif = function () {
-      }
-      // const gif = new GIF({
-      //   workers: 2,
-      //   quality: 10,
-      //   width: 800,
-      //   height: 200,
-      // });
-      // gif.addFrame(document.getElementById('content'));
-      // gif.on('finished', function(blob) {
-      //   window.open(URL.createObjectURL(blob));
-      // });
-      // gif.render();
-    }
-  </script>
+  <script src="gif.js"></script>
+  <script src="gif.worker.js"></script>
+  <script src="dom-to-image.min.js"></script>
 </head>
 <body>
   <div id="root">
     <div id="content">
-      <h1 id="title">我操你妈</h1>
+      <h1 id="title">赛博朋克</h1>
       <div id="picture-tube"></div>
     </div>
+    <button id="export-gif">导出gif</button>
   </div>
   <div id="warehouse"></div>
+  <script>
+    const warehouse = document.getElementById('warehouse');
+    const content = document.getElementById('content');
+    const exportGif = document.getElementById('export-gif');
+
+    const createImgs = async function () {
+      warehouse.innerHTML = '';
+      const tasks = [];
+      for (let i = 1; i < 60; i++) {
+        tasks.push(new Promise((resolve, reject) => {
+          setTimeout(() => {
+            domtoimage.toPng(content).then((url) => {
+              const img = new Image();
+              img.src = url;
+              img.style.display = 'none';
+              warehouse.appendChild(img);
+              resolve(img);
+            }).catch((error) => {
+              reject(error)
+            })
+          }, i * 16);
+        }))
+      }
+      return Promise.all(tasks);
+    }
+
+    const createGif = async function () {
+      const imgs = warehouse.getElementsByTagName('img');
+      const gif = new GIF({
+        workers: 4,
+        quality: 3,
+        width: 500,
+        height: 200,
+      });
+      for (let i = 0; i < imgs.length; i++) {
+        gif.addFrame(imgs[i]);
+      }
+      gif.on('finished', function(blob) {
+        window.open(URL.createObjectURL(blob));
+      });
+      gif.render();
+    }
+
+    const gif = async () => {
+      await createImgs();
+      await createGif();
+    }
+
+    exportGif.addEventListener('click', gif);
+  </script>
 </body>
 </html>

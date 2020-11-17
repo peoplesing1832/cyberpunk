@@ -13,9 +13,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
-  font-family: Cyberpunk;
+  font-family: Cyberpunk, fantasy;
+}
+
+#export-gif {
+  margin-top: 40px;
 }
 
 #content {
@@ -23,7 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 800px;
+  width: 500px;
   height: 200px;
   background-color: rgb(18, 27, 20)
 }
@@ -47,9 +52,13 @@
   width: 100%;
   height: auto;
   text-align: center;
-  font-size: 5em;
+  font-size: 80px;
   color: yellow;
   animation: title .5s infinite;
+}
+
+#title span {
+  font-size: 16px;
 }
 
 @keyframes pictureTube {
