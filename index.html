@@ -58,7 +58,7 @@
         height: 200,
       });
       for (let i = 0; i < imgs.length; i++) {
-        gif.addFrame(imgs[i]);
+        gif.addFrame(imgs[i], {delay: 16});
       }
       gif.on('finished', function(blob) {
         window.open(URL.createObjectURL(blob));
