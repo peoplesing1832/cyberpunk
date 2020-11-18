@@ -2,8 +2,7 @@
 
 Create cyberpunk style text and export gif
 
-![QQ20201118-080012-HD.gif](https://i.loli.net/2020/11/18/rP4LWKCx6cjQOVu.gif)
-
+![QQ20201118-104216-HD.gif](https://i.loli.net/2020/11/18/nDVyM9Orx2hwFLv.gif)
 
 ## use
 
