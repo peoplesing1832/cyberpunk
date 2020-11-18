@@ -58,7 +58,7 @@
   text-align: center;
   font-size: 80px;
   color: yellow;
-  animation: title .5s infinite;
+  animation: title 1000ms infinite;
   filter: drop-shadow(0 0 20px hsla(320, 40%, 60%, 0.8));
 }
 
