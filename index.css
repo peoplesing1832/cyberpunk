@@ -9,6 +9,36 @@
        url("/font/Cyberpunk.otf");
 }
 
+body {
+  color: #db0e15;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+  border: none;
+  padding: 10px 40px;
+  overflow: visible;
+  font-family: 'Share Tech Mono', monospace;
+  background: rgba(219, 14, 21, .2);
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(219, 14, 21, .8);
+}
+
+input {
+  border: 2px solid #d7001e;
+  padding: 10px;
+  width: 450px;
+  overflow: visible;
+  outline: 0;
+  background: 0 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+}
+
 #root {
   display: flex;
   justify-content: center;
@@ -17,14 +47,25 @@
   width: 100vw;
   height: 100vh;
   font-family: Cyberpunk, fantasy;
+  background-color: rgb(18, 27, 20);
 }
 
 #export-gif {
-  margin-top: 40px;
+  width: 300px;
+  margin-top: 80px;
+}
+
+#chang-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80px;
+  margin-top: 20px;
 }
 
 #form {
-  margin-top: 40px;
+  margin-right: 20px;
+  transform: translate3d(0, 0, 1px);
 }
 
 #content {
