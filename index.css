@@ -25,6 +25,7 @@ button {
   background: rgba(219, 14, 21, .2);
   text-transform: uppercase;
   text-shadow: 0 0 5px rgba(219, 14, 21, .8);
+  outline: none;
 }
 
 input {
